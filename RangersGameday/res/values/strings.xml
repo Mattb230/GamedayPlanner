@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Rangers Gameday</string>
+    <string name="myTickets">My Tickets</string>
+    <string name="buyNewTickets">Purchase Ticket</string>
+    <string name="dummy">dummy Ticket</string>
+    <string name="parking">Parking</string>
+    <string name="type">Type: </string>
+    <string name="lot">Lot: </string>
+    <string name="tailgate">Tailgate: </string>
+    <string name="howLong">How Long? </string>
+    <string name="departFrom">Depart From: </string>
+    <string name="viewTicket">View Ticket</string>
+    <string name="carFinder">Car Finder</string>
+    <string name="back">Back</string>
+    <string name="letsGo">Let\'s Go!</string>
+    
+    
+</resources>

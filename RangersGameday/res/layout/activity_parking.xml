@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView 
+        android:id="@+id/parkingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parking"
+        />
+    
+    <TextView 
+        android:id="@+id/typeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type"
+        android:layout_below="@id/parkingTextView"
+        />
+    
+    <TextView 
+        android:id="@+id/lotTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lot"
+        android:layout_below="@id/typeTextView"
+        />
+    <TextView 
+        android:id="@+id/tailgateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tailgate"
+        android:layout_below="@id/lotTextView"
+        />    
+    <TextView 
+        android:id="@+id/howLongTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/howLong"
+        android:layout_below="@id/tailgateTextView"
+        />        
+    <TextView 
+        android:id="@+id/departFromTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/departFrom"
+        android:layout_below="@id/howLongTextView"
+        />        
+        
+    <Button 
+        android:id="@+id/viewTicketButton"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewTicket" 
+        android:layout_below="@id/departFromTextView"
+        android:layout_centerHorizontal="true"           
+                       
+        />
+    <Button 
+        android:id="@+id/carFinderButton"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/carFinder" 
+        android:layout_below="@id/viewTicketButton"   
+        android:layout_centerHorizontal="true"           
+        />    
+</RelativeLayout>
