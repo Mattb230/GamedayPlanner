@@ -8,60 +8,151 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/parking"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"                
         />
-    
     <TextView 
         android:id="@+id/typeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/type"
-        android:layout_below="@id/parkingTextView"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@id/parkingTextView"     
         />
-    
+    <Spinner 
+        android:id="@+id/typeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/typeTextView"
+        android:layout_below="@id/parkingTextView"
+        android:prompt="@string/selectLotType" 
+        />
     <TextView 
         android:id="@+id/lotTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lot"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"        
         android:layout_below="@id/typeTextView"
+
         />
+    
+    <Spinner 
+        android:id="@+id/lotSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lotTextView"
+        android:layout_below="@id/typeTextView"
+        android:prompt="@string/selectLotLetter"
+
+        />
+        
     <TextView 
         android:id="@+id/tailgateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tailgate"
         android:layout_below="@id/lotTextView"
-        />    
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"  
+        
+         />    
+    
+    <RadioGroup
+        android:id="@+id/tailgateRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tailgateTextView"
+        android:layout_below="@id/lotTextView"
+        android:orientation="horizontal"
+
+         >
+        <RadioButton
+            android:id="@+id/tailgateYesRadio"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/yes"
+        	android:onClick="onRadioButtonClicked"
+        	/>
+        <RadioButton
+            android:id="@+id/tailgateNoRadio"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/no"
+        	android:onClick="onRadioButtonClicked"
+        	/>
+        </RadioGroup>
+        "
     <TextView 
         android:id="@+id/howLongTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/howLong"
         android:layout_below="@id/tailgateTextView"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+		android:visibility="gone"  
+        
         />        
+    <EditText
+        android:id="@+id/howLongEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/howLongTextView"
+        android:layout_below="@id/tailgateTextView"
+        android:hint="@string/minutes"
+        android:visibility="gone"  
+        
+            />
+    <TextView
+        android:id="@+id/minutesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:layout_toRightOf="@id/howLongEditText"   
+        android:layout_below="@id/tailgateTextView"  
+        android:text="@string/minutes"
+        android:visibility="gone"          
+        />
     <TextView 
         android:id="@+id/departFromTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/departFrom"
         android:layout_below="@id/howLongTextView"
-        />        
-        
-    <Button 
-        android:id="@+id/viewTicketButton"        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/viewTicket" 
-        android:layout_below="@id/departFromTextView"
-        android:layout_centerHorizontal="true"           
-                       
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"        
         />
-    <Button 
-        android:id="@+id/carFinderButton"        
+    <Spinner 
+        android:id="@+id/departFromSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/carFinder" 
-        android:layout_below="@id/viewTicketButton"   
-        android:layout_centerHorizontal="true"           
-        />    
+        android:layout_toRightOf="@id/departFromTextView"
+        android:layout_below="@id/howLongTextView"
+        />
+    <Button
+        android:id="@+id/carFinderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewTicketButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/viewTicketButton"
+        android:text="@string/carFinder" />
+
+    <Button
+        android:id="@+id/viewTicketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/carFinderButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:text="@string/viewTicket" />
+    
 </RelativeLayout>

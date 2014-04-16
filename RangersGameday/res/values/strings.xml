@@ -14,6 +14,28 @@
     <string name="carFinder">Car Finder</string>
     <string name="back">Back</string>
     <string name="letsGo">Let\'s Go!</string>
-    
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="D">D</string>
+    <string name="E">E</string>
+    <string name="F">F</string>
+    <string name="G">G</string>
+    <string name="H">H</string>
+    <string name="J">J</string>
+    <string name="K">K</string>
+    <string name="L">L</string>
+    <string name="M">M</string>
+    <string name="N">N</string>
+    <string name="cash">Cash</string>
+    <string name="reserved">Reserved</string>
+    <string name="season">Season</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>    
+    <string name="home">Home</string>    
+    <string name="currentLocation">Current Location</string>    
+    <string name="minutes">minutes</string>    
+    <string name="selectLotType">Select Lot Type</string>    
+    <string name="selectLotLetter">Select Lot Letter</string>    
     
 </resources>
