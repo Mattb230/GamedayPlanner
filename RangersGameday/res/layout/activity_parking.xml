@@ -107,18 +107,28 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/howLongTextView"
         android:layout_below="@id/tailgateTextView"
-        android:hint="@string/minutes"
         android:visibility="gone"  
-        
+        android:hint="@string/hint"
+        android:minWidth="40dp"
             />
     <TextView
         android:id="@+id/minutesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"   
         android:layout_toRightOf="@id/howLongEditText"   
-        android:layout_below="@id/tailgateTextView"  
+        android:layout_alignBaseline="@id/howLongEditText" 
         android:text="@string/minutes"
-        android:visibility="gone"          
+        android:visibility="gone"    
+        />
+    <Button 
+        android:id="@+id/minutesConfirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:layout_toRightOf="@id/minutesTextView"   
+        android:layout_below="@id/tailgateTextView"  
+        android:text="@string/ok"
+        android:layout_alignBaseline="@id/minutesTextView"
+        android:visibility="gone"
         />
     <TextView 
         android:id="@+id/departFromTextView"
@@ -129,13 +139,6 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"        
-        />
-    <Spinner 
-        android:id="@+id/departFromSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/departFromTextView"
-        android:layout_below="@id/howLongTextView"
         />
     <Button
         android:id="@+id/carFinderButton"

@@ -34,8 +34,11 @@
     <string name="no">No</string>    
     <string name="home">Home</string>    
     <string name="currentLocation">Current Location</string>    
-    <string name="minutes">minutes</string>    
+    <string name="minutes">minutes</string> 
+    <string name="ok">OK</string>    
     <string name="selectLotType">Select Lot Type</string>    
     <string name="selectLotLetter">Select Lot Letter</string>    
+    <string name="tailgatingLengthSet">Tailgating Length Set </string>    
+    <string name="hint">  </string>    
     
 </resources>
