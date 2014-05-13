@@ -130,16 +130,14 @@
         android:layout_alignBaseline="@id/minutesTextView"
         android:visibility="gone"
         />
-    <TextView 
-        android:id="@+id/departFromTextView"
+    <Button
+        android:id="@+id/letsGoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/departFrom"
-        android:layout_below="@id/howLongTextView"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"        
-        />
+        android:text="@string/letsGo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/minutesConfirmButton"       
+        />    
     <Button
         android:id="@+id/carFinderButton"
         android:layout_width="wrap_content"

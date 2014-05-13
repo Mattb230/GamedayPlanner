@@ -54,6 +54,7 @@ public class ParkingActivity extends Activity {
 	private RadioGroup mTailgateRadio;
 	private Button mMinutesConfirmButton;
 	private Button mViewTicketButton;
+	private Button mLetsGoButton;
 	private Uri mTicketImageUri;
 	private int mSavedTypeIndex;
 	private int mSavedLotIndex;
@@ -132,7 +133,7 @@ public class ParkingActivity extends Activity {
 			mTailgateRadio.performClick();
 		}
 		mDepartureList.add("Current Location");
-		setLatLongResult(mCurrentLat, mCurrentLong);
+		//setLatLongResult(mCurrentLat, mCurrentLong);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 		/*
 		 * On Click Listeners
@@ -172,7 +173,7 @@ public class ParkingActivity extends Activity {
 			public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 		        mCurrentLot = (String) parentView.getItemAtPosition(position);
 		        mCurrentLat = Double.parseDouble(mLotList.get(position).getLatitude());
-		        mCurrentLong = Double.parseDouble(mLotList.get(position).getLatitude());
+		        mCurrentLong = Double.parseDouble(mLotList.get(position).getLongitude());
 			}
 			@Override
 			public void onNothingSelected(AdapterView<?> parentView){
@@ -190,12 +191,24 @@ public class ParkingActivity extends Activity {
 				if(mHowLongEditText.getText().toString().length() != 0){
 					mTailgatingLength = mHowLongEditText.getText().toString();
 					toast = "You're set to tailgate for " + mTailgatingLength + " minutes";
-		        	Toast.makeText(getApplicationContext(), toast,
-		        			Toast.LENGTH_LONG).show();
+		        	Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_LONG).show();
 				}
 				//mTailgatingLength = mHowLongEditText.getText().toString();
 			}
 		});
+		/*
+		 * Let's Go Button Listener. Launched Navigation Intent to desires GPS coordinates
+		 */
+		mLetsGoButton = (Button)findViewById(R.id.letsGoButton);
+		mLetsGoButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=" + mCurrentLat + "," + mCurrentLong )); 
+				startActivity(i);
+			}
+		});
+		
 		/*
 		 * View Ticket Button Listener
 		 */
@@ -275,10 +288,4 @@ public class ParkingActivity extends Activity {
 		super.onSaveInstanceState(savedInstanceState);
 	}
 
-	private void setLatLongResult(double lat, double lon){
-		Intent data = new Intent();
-		data.putExtra(EXTRA_PARKING_LAT, lat);
-		data.putExtra(EXTRA_PARKING_LONG, lon);
-		setResult(RESULT_OK, data);
-	}
 }

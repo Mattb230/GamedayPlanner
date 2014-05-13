@@ -40,5 +40,6 @@
     <string name="selectLotLetter">Select Lot Letter</string>    
     <string name="tailgatingLengthSet">Tailgating Length Set </string>    
     <string name="hint">  </string>    
-    
+    <string name="addTicketPrompt">To add a ticket, share an image with this application from your Gallery</string>    
+    <string name="launchGallery">Launch Gallery</string>    
 </resources>

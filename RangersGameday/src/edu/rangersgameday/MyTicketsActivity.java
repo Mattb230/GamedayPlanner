@@ -12,14 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.rangersgameday.R;
 
 public class MyTicketsActivity extends Activity {
 	
 	private Button mDummyButton;
-	private Button mLetsGoButton;
 	private ImageButton mDummyImageButton;
+	private TextView mAddTicketTextView;
+	private Button mLaunchGalleryButton;
 	private Uri mDummyImage;
 	private double mLat;
 	private double mLong;
@@ -33,9 +35,13 @@ public class MyTicketsActivity extends Activity {
 		setContentView(R.layout.activity_my_tickets);
 		
 		mDummyImage = getIntent().getParcelableExtra(EXTRA_TICKET_IMAGE);
-		
-		
-
+		mLaunchGalleryButton = (Button)findViewById(R.id.launchGalleryButton);
+		mAddTicketTextView = (TextView)findViewById(R.id.addTicketTextView);
+		mAddTicketTextView.setText(R.string.addTicketPrompt);
+		if(mDummyImage != null){
+			mAddTicketTextView.setVisibility(View.GONE);
+			mLaunchGalleryButton.setVisibility(View.GONE);
+		}
 //////////////////////////////////////////////////////////////////////////////////////////////
 		/*
 		 * On Click Listeners
@@ -45,42 +51,39 @@ public class MyTicketsActivity extends Activity {
 		/*
 		 * Image Button Listener
 		 */
-		mDummyImageButton = (ImageButton)findViewById(R.id.dummyImageButton);
+		mDummyImageButton = (ImageButton)findViewById(R.id.ticketImageButton);
 		mDummyImageButton.setImageURI(mDummyImage);
-		if(mDummyImage == null)
+		//If there is no ticket, hide the imageButton and display prompt for the user
+		if(mDummyImage == null){
 			mDummyImageButton.setVisibility(View.GONE);
+		}
 		mDummyImageButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(MyTicketsActivity.this, ParkingActivity.class);
 				i.putExtra(ParkingActivity.EXTRA_TICKET_IMAGE, mDummyImage);
-				startActivityForResult(i, 0);
-			}
-		});
-		
-		/*
-		 * Lets Go Button Listener
-		 */
-		mLetsGoButton = (Button)findViewById(R.id.letsGoButton);
-		mLetsGoButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q="+mLat+"	"+mLong)); 
 				startActivity(i);
 			}
 		});
 		
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data){
-		if (data == null){
-			return;
-		}
-		mLong = data.getDoubleExtra(ParkingActivity.EXTRA_PARKING_LONG, 0);
-		mLat = data.getDoubleExtra(ParkingActivity.EXTRA_PARKING_LAT, 0);
+		/*
+		 * Launch Gallery Button Listener. I couldn't get it totally working, gallery closes once I select an image. To preview it change the 
+		 * iff statement condition to "mDummyImage != null"
+		 */
+		mLaunchGalleryButton.setText(R.string.launchGallery);
+		mLaunchGalleryButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(Intent.ACTION_PICK);
+				i.setType("image/*");
+				startActivity(i);
+			}
+		});
+////////////////////////////////////////////////////////////////////////////////////////////////		
+		
+		
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

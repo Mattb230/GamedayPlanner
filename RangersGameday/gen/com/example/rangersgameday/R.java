@@ -14,27 +14,28 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int addTicketTextView=0x7f060003;
         public static final int buyNewTicketButton=0x7f060001;
-        public static final int carFinderButton=0x7f060012;
-        public static final int departFromTextView=0x7f060011;
-        public static final int dummyImageButton=0x7f060002;
-        public static final int howLongEditText=0x7f06000e;
-        public static final int howLongTextView=0x7f06000d;
-        public static final int letsGoButton=0x7f060003;
-        public static final int lotSpinner=0x7f060008;
-        public static final int lotTextView=0x7f060007;
-        public static final int minutesConfirmButton=0x7f060010;
-        public static final int minutesTextView=0x7f06000f;
+        public static final int carFinderButton=0x7f060013;
+        public static final int howLongEditText=0x7f06000f;
+        public static final int howLongTextView=0x7f06000e;
+        public static final int launchGalleryButton=0x7f060004;
+        public static final int letsGoButton=0x7f060012;
+        public static final int lotSpinner=0x7f060009;
+        public static final int lotTextView=0x7f060008;
+        public static final int minutesConfirmButton=0x7f060011;
+        public static final int minutesTextView=0x7f060010;
         public static final int myTicketsButton=0x7f060000;
-        public static final int parkingTextView=0x7f060004;
-        public static final int tailgateNoRadio=0x7f06000c;
-        public static final int tailgateRadioGroup=0x7f06000a;
-        public static final int tailgateTextView=0x7f060009;
-        public static final int tailgateYesRadio=0x7f06000b;
-        public static final int typeSpinner=0x7f060006;
-        public static final int typeTextView=0x7f060005;
-        public static final int viewTicketButton=0x7f060013;
-        public static final int viewTicketImageView=0x7f060014;
+        public static final int parkingTextView=0x7f060005;
+        public static final int tailgateNoRadio=0x7f06000d;
+        public static final int tailgateRadioGroup=0x7f06000b;
+        public static final int tailgateTextView=0x7f06000a;
+        public static final int tailgateYesRadio=0x7f06000c;
+        public static final int ticketImageButton=0x7f060002;
+        public static final int typeSpinner=0x7f060007;
+        public static final int typeTextView=0x7f060006;
+        public static final int viewTicketButton=0x7f060014;
+        public static final int viewTicketImageView=0x7f060015;
     }
     public static final class layout {
         public static final int activity_home_screen=0x7f030000;
@@ -56,6 +57,7 @@ public final class R {
         public static final int L=0x7f040018;
         public static final int M=0x7f040019;
         public static final int N=0x7f04001a;
+        public static final int addTicketPrompt=0x7f040028;
         public static final int app_name=0x7f040000;
         public static final int back=0x7f04000c;
         public static final int buyNewTickets=0x7f040002;
@@ -67,6 +69,7 @@ public final class R {
         public static final int hint=0x7f040027;
         public static final int home=0x7f040020;
         public static final int howLong=0x7f040008;
+        public static final int launchGallery=0x7f040029;
         public static final int letsGo=0x7f04000d;
         public static final int lot=0x7f040006;
         public static final int minutes=0x7f040022;
