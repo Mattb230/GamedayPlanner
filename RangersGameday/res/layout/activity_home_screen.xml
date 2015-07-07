@@ -9,10 +9,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="130dp"
-        android:layout_centerHorizontal="true"
         android:text="@string/myTickets"
         android:layout_alignLeft="@+id/buyNewTicketButton"
-        android:layout_alignRight="@+id/buyNewTicketButton" />
+        android:layout_alignRight="@+id/buyNewTicketButton"
+        android:layout_alignEnd="@+id/buyNewTicketButton" />
 
     <Button
         android:id="@+id/buyNewTicketButton"

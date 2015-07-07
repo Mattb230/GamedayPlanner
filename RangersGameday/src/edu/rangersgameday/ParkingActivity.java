@@ -103,7 +103,7 @@ public class ParkingActivity extends Activity {
 		mLotList.add(new ParkingLot("B","Season","32.748996","-97.081978","15"));	
 		mLotList.add(new ParkingLot("B","Cash","32.746677","-97.083973","15"));	
 		mLotList.add(new ParkingLot("C","Reserved","32.748996","-97.081978","15"));	
-		mLotList.add(new ParkingLot("C","Cash","32.749267","-97.079815","15"));	
+		mLotList.add(new ParkingLot("C","Cash","32.749267","-97.079815","15"));
 		mLotList.add(new ParkingLot("D","Season","32.751654","-97.077937","15"));	
 		mLotList.add(new ParkingLot("D","Cash","32.750219","-97.077181","15"));	
 		mLotList.add(new ParkingLot("E","Reserved","32.752732","-97.080272","15"));	
@@ -211,6 +211,8 @@ public class ParkingActivity extends Activity {
 		
 		/*
 		 * View Ticket Button Listener
+		 * Will be implemened at a later date
+		 * Will save current GPS location, and when called again, will navigate back to gps location
 		 */
 		mViewTicketButton = (Button)findViewById(R.id.viewTicketButton);
 		mViewTicketButton.setOnClickListener(new View.OnClickListener() {
@@ -222,7 +224,7 @@ public class ParkingActivity extends Activity {
 				startActivity(i);
 			}
 		});
-		
+
 		
 
 		

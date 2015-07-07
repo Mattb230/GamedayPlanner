@@ -5,18 +5,18 @@ public class ParkingLot {
 	private String mType;
 	//{A, B, C, ... , M, N}
 	private String mLot;
-	//walk length in minutes
-	private String mWalkLength;
 	private String mLatitude;
 	private String mLongitude;
+	//walk length in minutes
+	private String mWalkLength;
 	
 	
 	public ParkingLot(){
 		mLot = "";		
 		mType = "";
-		mWalkLength = "";
 		mLatitude = "";
 		mLongitude = "";
+		mWalkLength = "";
 	}
 	
 	public ParkingLot(String lot, String type, String latitude, String longitude, String walkLength){
