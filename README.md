@@ -3,7 +3,7 @@ GamedayPlanner
 
 Final Project for Fundamentals of Mobile Application Development 
 
-This branch contains the project as I submitted it, and contains incomplete features. I have decided to downscale the project to only include the functions included with Parking Screen (activity_parking) below. I feel the other functions aren't necessary, and that it would be more useful for the user to have an app which simply allows them to select their parking lot and be navigated to it. I have recently began workign on this and it can be found in the master branch
+This branch contains the project as I submitted it, and contains incomplete features. I have decided to downscale the project to only include the functions included with Parking Screen (activity_parking) below. I feel the other functions aren't necessary, and that it would be more useful for the user to have an app which simply allows them to select their parking lot and be navigated to it. I have recently began working on this and it can be found in the master branch
 
 APP Details:
 Home Screen (acivity_home_screen):
