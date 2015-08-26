@@ -2,7 +2,7 @@
 
     <string name="app_name">Dallas Stadium Parking</string>
     <string name="myTickets">My Tickets</string>
-    <string name="purchaseTickets">Purchase Ticket</string>
+    <string name="buyTickets">Buy Tickets</string>
     <string name="dummy">dummy Ticket</string>
     <string name="parking">Parking</string>
     <string name="type">Type: </string>
@@ -13,7 +13,7 @@
     <string name="viewTicket">View Ticket</string>
     <string name="carFinder">Car Finder</string>
     <string name="back">Back</string>
-    <string name="letsGo">Let\'s Go!</string>
+    <string name="navigate">Navigate</string>
     <string name="A">A</string>
     <string name="B">B</string>
     <string name="C">C</string>

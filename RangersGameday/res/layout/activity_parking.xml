@@ -139,15 +139,17 @@
         android:id="@+id/letsGoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/letsGo"
-        android:layout_centerHorizontal="true"
+        android:text="@string/navigate"
         android:layout_below="@id/lotSpinner"
-        />
+        android:layout_alignRight="@+id/purchaseTicketsButton"
+        android:layout_alignEnd="@+id/purchaseTicketsButton"
+        android:layout_alignLeft="@+id/purchaseTicketsButton"
+        android:layout_alignStart="@+id/purchaseTicketsButton" />
     <Button
         android:id="@+id/purchaseTicketsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/purchaseTickets"
+        android:text="@string/buyTickets"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/letsGoButton"
         />

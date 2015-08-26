@@ -15,7 +15,7 @@ public final class R {
     }
     public static final class id {
         public static final int addTicketTextView=0x7f060003;
-        public static final int buyNewTicketButton=0x7f060001;
+        public static final int cowboysParkingButton =0x7f060001;
         public static final int carFinderButton=0x7f060013;
         public static final int howLongEditText=0x7f06000f;
         public static final int howLongTextView=0x7f06000e;
@@ -60,7 +60,7 @@ public final class R {
         public static final int addTicketPrompt=0x7f040028;
         public static final int app_name=0x7f040000;
         public static final int back=0x7f04000c;
-        public static final int purchaseTickets =0x7f040002;
+        public static final int buyTickets =0x7f040002;
         public static final int carFinder=0x7f04000b;
         public static final int cash=0x7f04001b;
         public static final int currentLocation=0x7f040021;
@@ -70,7 +70,7 @@ public final class R {
         public static final int home=0x7f040020;
         public static final int howLong=0x7f040008;
         public static final int launchGallery=0x7f040029;
-        public static final int letsGo=0x7f04000d;
+        public static final int navigate =0x7f04000d;
         public static final int lot=0x7f040006;
         public static final int minutes=0x7f040022;
         public static final int myTickets=0x7f040001;

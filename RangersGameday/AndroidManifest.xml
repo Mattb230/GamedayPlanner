@@ -43,9 +43,8 @@
     		</intent-filter>  
         </activity>    
         <activity android:name="edu.rangersgameday.MyTicketsActivity"></activity>  
-        <activity android:name="edu.rangersgameday.RangersParkingActivity"></activity>
+        <activity android:name="edu.rangersgameday.ParkingActivity"></activity>
         <activity android:name="edu.rangersgameday.ViewTicketActivity"></activity>
-        <activity android:name="edu.rangersgameday.CowboysParkingActivity" />
 
     </application>
 

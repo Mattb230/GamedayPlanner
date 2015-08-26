@@ -57,8 +57,8 @@ public class MyTicketsActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MyTicketsActivity.this, RangersParkingActivity.class);
-				i.putExtra(RangersParkingActivity.EXTRA_TICKET_IMAGE, mDummyImage);
+				Intent i = new Intent(MyTicketsActivity.this, ParkingActivity.class);
+				i.putExtra(ParkingActivity.EXTRA_TICKET_IMAGE, mDummyImage);
 				startActivity(i);
 			}
 		});

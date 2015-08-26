@@ -15,7 +15,7 @@
         />
 
     <Button
-        android:id="@+id/buyNewTicketButton"
+        android:id="@+id/cowboysParkingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
