@@ -14,7 +14,7 @@ import android.widget.Button;
 public class HomeScreenActivity extends Activity {
 
 	private boolean mStartedFromLauncher;
-	private Button mMyTicketsButton;
+	private Button mRangersParkingButton;
 	private Button mPurchaseTicketButton;
 	
 	
@@ -39,13 +39,13 @@ public class HomeScreenActivity extends Activity {
 		/*
 		 * Button Listeners
 		 */
-		mMyTicketsButton = (Button)findViewById(R.id.myTicketsButton);
-		mMyTicketsButton.setOnClickListener(new View.OnClickListener() {
-			
+		mRangersParkingButton = (Button)findViewById(R.id.rangersParkingButton);
+		mRangersParkingButton.setOnClickListener(new View.OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
-					Intent i = new Intent(HomeScreenActivity.this, MyTicketsActivity.class);
-					startActivity(i);
+				Intent i = new Intent(HomeScreenActivity.this, RangersParkingActivity.class);
+				startActivity(i);
 			}
 		});//end listener
 		
@@ -54,8 +54,9 @@ public class HomeScreenActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://texas.rangers.mlb.com/ticketing/singlegame.jsp?c_id=tex"));
-				startActivity(i);
+				//Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://texas.rangers.mlb.com/ticketing/singlegame.jsp?c_id=tex"));
+                Intent i = new Intent(HomeScreenActivity.this, CowboysParkingActivity.class);
+                startActivity(i);
 			}
 		});
 	}//end onCreate

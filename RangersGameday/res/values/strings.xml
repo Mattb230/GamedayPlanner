@@ -1,8 +1,8 @@
 <resources>
 
-    <string name="app_name">Rangers Gameday</string>
+    <string name="app_name">Dallas Stadium Parking</string>
     <string name="myTickets">My Tickets</string>
-    <string name="buyNewTickets">Purchase Ticket</string>
+    <string name="purchaseTickets">Purchase Ticket</string>
     <string name="dummy">dummy Ticket</string>
     <string name="parking">Parking</string>
     <string name="type">Type: </string>
@@ -41,5 +41,8 @@
     <string name="tailgatingLengthSet">Tailgating Length Set </string>    
     <string name="hint">  </string>    
     <string name="addTicketPrompt">To add a ticket, share an image with this application from your Gallery</string>    
-    <string name="launchGallery">Launch Gallery</string>    
+    <string name="launchGallery">Launch Gallery</string>
+    <string name="rangersParking">Rangers Parking</string>
+    <string name="cowboysParking">Cowboys Parking</string>
+
 </resources>

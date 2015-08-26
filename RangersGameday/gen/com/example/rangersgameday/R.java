@@ -25,7 +25,7 @@ public final class R {
         public static final int lotTextView=0x7f060008;
         public static final int minutesConfirmButton=0x7f060011;
         public static final int minutesTextView=0x7f060010;
-        public static final int myTicketsButton=0x7f060000;
+        public static final int rangersParkingButton =0x7f060000;
         public static final int parkingTextView=0x7f060005;
         public static final int tailgateNoRadio=0x7f06000d;
         public static final int tailgateRadioGroup=0x7f06000b;
@@ -60,7 +60,7 @@ public final class R {
         public static final int addTicketPrompt=0x7f040028;
         public static final int app_name=0x7f040000;
         public static final int back=0x7f04000c;
-        public static final int buyNewTickets=0x7f040002;
+        public static final int purchaseTickets =0x7f040002;
         public static final int carFinder=0x7f04000b;
         public static final int cash=0x7f04001b;
         public static final int currentLocation=0x7f040021;

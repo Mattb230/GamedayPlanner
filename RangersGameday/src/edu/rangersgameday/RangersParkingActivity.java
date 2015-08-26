@@ -22,7 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ParkingActivity extends Activity {
+public class RangersParkingActivity extends Activity {
 	
 	public static final String EXTRA_PARKING_LAT = "edu.rangersgameday.extra_parking_lat";
 	public static final String EXTRA_PARKING_LONG = "edu.rangersgameday.extra_parking_long";
@@ -43,7 +43,9 @@ public class ParkingActivity extends Activity {
 	private ArrayAdapter<String> mTailgateAdapter;
 	private ArrayAdapter<String> mDepartFromAdapter;
 	private TextView mLotTextView;
-	private TextView mTailgateTextView;
+    private TextView mParkingTextView;
+
+    private TextView mTailgateTextView;
 	private TextView mHowLongTextView;
 	private TextView mMinutesTextView;	
 	private EditText mHowLongEditText;
@@ -55,6 +57,7 @@ public class ParkingActivity extends Activity {
 	private Button mMinutesConfirmButton;
 	private Button mViewTicketButton;
 	private Button mLetsGoButton;
+	private Button mPurchaseTicketsButton;
 	private Uri mTicketImageUri;
 	private int mSavedTypeIndex;
 	private int mSavedLotIndex;
@@ -73,15 +76,19 @@ public class ParkingActivity extends Activity {
 			mSavedLotIndex = savedInstanceState.getInt(STATE_LOT_SELECTION_INDEX);
 			
 		}
+
+        mParkingTextView = (TextView)findViewById(R.id.parkingTextView);
+        mParkingTextView.setText("Rangers Parking");
 		
 		//list to hold all the parking lot objects
 		mLotList = new ArrayList<ParkingLot>();
 		mLotTextView = (TextView)findViewById(R.id.lotTextView);
-		mTailgateTextView = (TextView)findViewById(R.id.tailgateTextView);
-		mHowLongTextView = (TextView)findViewById(R.id.howLongTextView);
-		mMinutesTextView = (TextView)findViewById(R.id.minutesTextView);
-		mHowLongEditText = (EditText)findViewById(R.id.howLongEditText);
-		mTailgateRadio = (RadioGroup)findViewById(R.id.tailgateRadioGroup);
+
+		//mTailgateTextView = (TextView)findViewById(R.id.tailgateTextView);
+		//mHowLongTextView = (TextView)findViewById(R.id.howLongTextView);
+		//mMinutesTextView = (TextView)findViewById(R.id.minutesTextView);
+		//mHowLongEditText = (EditText)findViewById(R.id.howLongEditText);
+		//mTailgateRadio = (RadioGroup)findViewById(R.id.tailgateRadioGroup);
 		
 
 		mTypeSpinner = (Spinner)findViewById(R.id.typeSpinner);		
@@ -130,7 +137,7 @@ public class ParkingActivity extends Activity {
 		
 		if(mFromSavedState){
 			mTypeSpinner.setSelection(mSavedTypeIndex);
-			mTailgateRadio.performClick();
+			//mTailgateRadio.performClick();
 		}
 		mDepartureList.add("Current Location");
 		//setLatLongResult(mCurrentLat, mCurrentLong);
@@ -181,8 +188,10 @@ public class ParkingActivity extends Activity {
 		});
 		
 		/*
-		 * Minutes Confirm Button Listener
+		 * Minutes Confirm Button Listener -- @TODO uncomment when reado to implement
+		 *
 		 */
+		/*
 		mMinutesConfirmButton = (Button)findViewById(R.id.minutesConfirmButton);
 		mMinutesConfirmButton.setOnClickListener(new View.OnClickListener() {			
 			@Override
@@ -196,6 +205,7 @@ public class ParkingActivity extends Activity {
 				//mTailgatingLength = mHowLongEditText.getText().toString();
 			}
 		});
+		*/
 		/*
 		 * Let's Go Button Listener. Launched Navigation Intent to desires GPS coordinates
 		 */
@@ -208,22 +218,36 @@ public class ParkingActivity extends Activity {
 				startActivity(i);
 			}
 		});
-		
+
 		/*
-		 * View Ticket Button Listener
+		 * Purchase Tickets Button Listener. Launches web broser to allow user to purchase tickets
+		 */
+		mPurchaseTicketsButton = (Button)findViewById(R.id.purchaseTicketsButton);
+		mPurchaseTicketsButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://texas.rangers.mlb.com/ticketing/singlegame.jsp?c_id=tex"));
+				startActivity(i);
+			}
+		});
+
+		/*
+		 * View Ticket Button Listener -- @TODO Comment out when ready to implement
 		 * Will be implemened at a later date
 		 * Will save current GPS location, and when called again, will navigate back to gps location
 		 */
+		/*
 		mViewTicketButton = (Button)findViewById(R.id.viewTicketButton);
 		mViewTicketButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(ParkingActivity.this, ViewTicketActivity.class);
+				Intent i = new Intent(RangersParkingActivity.this, ViewTicketActivity.class);
 				i.putExtra(ViewTicketActivity.EXTRA_TICKET_IMAGE, mTicketImageUri);
 				startActivity(i);
 			}
 		});
+		*/
 
 		
 
@@ -250,8 +274,10 @@ public class ParkingActivity extends Activity {
 	}//end populateLotLetterSpinner
 	
 	/*
+	 * @TODO uncomment when ready to implement tailgating
 	 * Radio Button Functionality. Sets the value of tailgating
 	 */
+	/*
 	public void onRadioButtonClicked(View view){
 		
 		boolean checked = ((RadioButton)view).isChecked();
@@ -277,6 +303,7 @@ public class ParkingActivity extends Activity {
 			break;
 		}//end switch
 	}
+	*/
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		return super.onCreateOptionsMenu(menu);

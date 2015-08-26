@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name="edu.rangersgameday.ParkingActivity"
+            android:name="edu.rangersgameday.HomeScreenActivity"
             android:label="@string/app_name"    >       
             <intent-filter>   
                 <action android:name="android.intent.action.MAIN" />
@@ -43,9 +43,10 @@
     		</intent-filter>  
         </activity>    
         <activity android:name="edu.rangersgameday.MyTicketsActivity"></activity>  
-        <!-- <activity android:name="edu.rangersgameday.ParkingActivity"></activity>  -->
-        <activity android:name="edu.rangersgameday.ViewTicketActivity"></activity>  
-        
+        <activity android:name="edu.rangersgameday.RangersParkingActivity"></activity>
+        <activity android:name="edu.rangersgameday.ViewTicketActivity"></activity>
+        <activity android:name="edu.rangersgameday.CowboysParkingActivity" />
+
     </application>
 
 </manifest>

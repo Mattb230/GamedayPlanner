@@ -55,7 +55,7 @@
     <!-- Tailgate feature being held off for now
         Will allow the user to select how long they wish to tailgate, and will select a lot
         accordingly -->
-
+    <!--
     <TextView 
         android:id="@+id/tailgateTextView"
         android:layout_width="wrap_content"
@@ -66,8 +66,6 @@
         android:paddingBottom="10dp"
         android:paddingLeft="40dp"
 
-        android:visibility="gone"
-        
          />    
     
     <RadioGroup
@@ -77,7 +75,6 @@
         android:layout_toRightOf="@id/tailgateTextView"
         android:layout_below="@id/lotTextView"
         android:orientation="horizontal"
-        android:visibility="gone"
 
          >
         <RadioButton
@@ -137,15 +134,28 @@
         android:layout_alignBaseline="@id/minutesTextView"
         android:visibility="gone"
         />
+        -->
     <Button
         android:id="@+id/letsGoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/letsGo"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/minutesConfirmButton"       
-        />    
+        android:layout_below="@id/lotSpinner"
+        />
+    <Button
+        android:id="@+id/purchaseTicketsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchaseTickets"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/letsGoButton"
+        />
+
+    <!-- android:layout_below="@id/minutesConfirmButton"       -->
+
     <!-- These buttons will be implemented at a later date -->
+    <!--
     <Button
         android:id="@+id/carFinderButton"
         android:layout_width="wrap_content"
@@ -154,7 +164,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/viewTicketButton"
         android:text="@string/carFinder"
-        android:visibility="gone"
         />
 
     <Button
@@ -165,7 +174,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:text="@string/viewTicket"
-        android:visibility="gone"
         />
-
+    -->
 </RelativeLayout>

@@ -1,17 +1,13 @@
 package edu.rangersgameday;
 
-import java.net.URI;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.rangersgameday.R;
@@ -61,8 +57,8 @@ public class MyTicketsActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MyTicketsActivity.this, ParkingActivity.class);
-				i.putExtra(ParkingActivity.EXTRA_TICKET_IMAGE, mDummyImage);
+				Intent i = new Intent(MyTicketsActivity.this, RangersParkingActivity.class);
+				i.putExtra(RangersParkingActivity.EXTRA_TICKET_IMAGE, mDummyImage);
 				startActivity(i);
 			}
 		});
